@@ -6,14 +6,10 @@ import sys
 import time
 import os
 
-ip = raw_input('Introdueix l\'adreça IP del Testbed: ')
-cmd = "ssh {} 'python /home/pi/start.py {}'".format('pi@' + ip, ip)
- 
-subprocess.Popen(shlex.split(cmd), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-time.sleep(5)
+#ip = raw_input('Introdueix l\'adreça IP del Testbed: ')
+cmd = "ssh {} 'python /home/pi/start.py {}'".format('pi@10.0.1.88', '10.0.1.88')
 
-print "Testbed started!"
-
+os.system(cmd)
 #sys.exit(0)
 
 
